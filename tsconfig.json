@@ -2,6 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "lib": ["esnext"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   }
 }
