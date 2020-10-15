@@ -6,7 +6,7 @@
 
 ![](./img/getData.svg)
 
-> `getData` is identical to `arweave.transactions.getData`, except it uses caching whne run in the browser.
+> `getData` is identical to `arweave.transactions.getData`, except it uses caching when run in the browser.
 
 ![](./img/getContract.svg)
 
