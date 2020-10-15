@@ -1,7 +1,7 @@
 import Arweave from "arweave";
 import { updateCache } from "./utils";
 
-export async function getTxData(client: Arweave, id: string): Promise<string> {
+export async function getData(client: Arweave, id: string): Promise<string> {
   // @ts-ignore
   const isBrowser: boolean = process.browser;
 
