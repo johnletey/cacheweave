@@ -1,4 +1,6 @@
-![](./img/hero.svg)
+<p align="center">
+  <img src="./img/hero.svg" />
+</p>
 
 ## Usage
 
