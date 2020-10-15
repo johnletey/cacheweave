@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="./img/hero.svg" />
+  <img src="https://raw.githubusercontent.com/johnletey/cacheweave/main/img/hero.svg" />
 </p>
 
 ## Usage
 
-![](./img/getData.svg)
+![](https://raw.githubusercontent.com/johnletey/cacheweave/main/img/getData.svg)
 
 > `getData` is identical to `arweave.transactions.getData`, except it uses caching when run in the browser.
 
-![](./img/getContract.svg)
+![](https://raw.githubusercontent.com/johnletey/cacheweave/main/img/getContract.svg)
 
 > `getContract` is identical to `smartweave.readContract`, except it uses caching when run in the browser.
