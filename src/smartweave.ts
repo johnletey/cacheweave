@@ -34,9 +34,8 @@ export const getContract = async (
   client: Arweave,
   contract: string
 ): Promise<StateInterface> => {
-  // process.browser is not recommended as it is dependant on the bundler
-  // therefore, we take advantage of typescript's dom typings to check for browser enviornment.
-  const isBrowser = typeof window !== "undefined";
+  const isBrowser: boolean = typeof window !== "undefined";
+
   if (isBrowser) {
     const latest = await latestInteraction(contract);
     const cache = JSON.parse(localStorage.getItem("smartweaveCache") || "{}");

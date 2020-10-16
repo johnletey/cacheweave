@@ -3,6 +3,7 @@ import { updateCache } from "./utils";
 
 export async function getData(client: Arweave, id: string): Promise<string> {
   const isBrowser: boolean = typeof window !== "undefined";
+
   if (isBrowser) {
     const cache = JSON.parse(localStorage.getItem("dataCache") || "{}");
 
