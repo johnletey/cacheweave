@@ -5,8 +5,9 @@
   "author": "John Letey <johnletey@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "rollup -c",
     "fmt": "prettier --write .",
-    "build": "rollup -c"
+    "fmt:check": "prettier --check ."
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
