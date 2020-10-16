@@ -2,6 +2,9 @@
   <img src="https://raw.githubusercontent.com/johnletey/cacheweave/main/img/hero.svg" />
 </p>
 
+[![Build Status](https://img.shields.io/github/workflow/status/johnletey/cacheweave/Test?style=flat&colorA=000000&colorB=000000)](https://github.com/johnletey/cacheweave/actions?query=workflow%3ATest)
+[![Version](https://img.shields.io/npm/v/cacheweave?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/cacheweave)
+
 ## Usage
 
 ![](https://raw.githubusercontent.com/johnletey/cacheweave/main/img/getData.svg)
