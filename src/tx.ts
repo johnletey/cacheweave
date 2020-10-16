@@ -11,6 +11,7 @@ export async function getData(client: Arweave, id: string): Promise<string> {
       return cache[id];
     }
   }
+
   const buf: string | Uint8Array = await client.transactions.getData(id, {
     decode: true,
     string: true,
