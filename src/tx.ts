@@ -2,11 +2,9 @@ import Arweave from "arweave";
 import { updateCache } from "./utils";
 
 export async function getData(client: Arweave, id: string): Promise<string> {
-  // @ts-ignore
-  const isBrowser: boolean = process.browser;
+  const isBrowser: boolean = typeof window !== "undefined";
 
   if (isBrowser) {
-    // @ts-ignore
     const cache = JSON.parse(localStorage.getItem("dataCache") || "{}");
 
     if (id in cache) {

@@ -34,12 +34,10 @@ export const getContract = async (
   client: Arweave,
   contract: string
 ): Promise<StateInterface> => {
-  // @ts-ignore
-  const isBrowser = process.browser;
+  const isBrowser: boolean = typeof window !== "undefined";
 
   if (isBrowser) {
     const latest = await latestInteraction(contract);
-    // @ts-ignore
     const cache = JSON.parse(localStorage.getItem("smartweaveCache") || "{}");
 
     if (contract in cache) {
