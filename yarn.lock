@@ -246,10 +246,10 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-localporridge@^1.0.0-alpha:
-  version "1.0.0-alpha"
-  resolved "https://registry.yarnpkg.com/localporridge/-/localporridge-1.0.0-alpha.tgz#70fa00c3e1467fe25a654593f34e58ad9ca9f422"
-  integrity sha512-6yOPI+FAaMHrdLMbnex7V3r9rykDhqAwrMFKkvfq49hqhTl0ZSMLyDva4UqDBw4ClfRU+iYIhnr9yOFlTCLqYA==
+localporridge@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/localporridge/-/localporridge-1.0.0.tgz#718eb86547b075ec78b369a26b7d1b6fddd171d5"
+  integrity sha512-mCaTeK+CMBUElyxQiLOIB0GdEOTZwvYl/VyqynJ+ApQbelItugJnp4+45jBcFbSAvFV9lStnkCK1ZbCNL75iUg==
 
 locate-path@^5.0.0:
   version "5.0.0"
