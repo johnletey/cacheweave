@@ -1,3 +1,4 @@
+import localPorridge from "localporridge";
 import fetch from "node-fetch";
 
 export const updateCache = (
@@ -5,11 +6,13 @@ export const updateCache = (
   element: string,
   value: any
 ): void => {
-  const cache = JSON.parse(localStorage.getItem(name) || "{}");
+  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
+
+  const cache = JSON.parse(storage.getItem(name) || "{}");
 
   cache[element] = value;
 
-  localStorage.setItem(name, JSON.stringify(cache));
+  storage.setItem(name, JSON.stringify(cache));
 };
 
 export const query = async ({

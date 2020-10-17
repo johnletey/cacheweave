@@ -18,6 +18,7 @@
   "dependencies": {
     "arweave": "^1.9.1",
     "community-js": "^1.0.15",
+    "localporridge": "^1.0.0-alpha",
     "node-fetch": "^2.6.1",
     "smartweave": "^0.3.6"
   },

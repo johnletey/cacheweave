@@ -1,15 +1,14 @@
 import Arweave from "arweave";
+import localPorridge from "localporridge";
 import { updateCache } from "./utils";
 
 export async function getData(client: Arweave, id: string): Promise<string> {
-  const isBrowser: boolean = typeof window !== "undefined";
+  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
 
-  if (isBrowser) {
-    const cache = JSON.parse(localStorage.getItem("dataCache") || "{}");
+  const cache = JSON.parse(storage.getItem("dataCache") || "{}");
 
-    if (id in cache) {
-      return cache[id];
-    }
+  if (id in cache) {
+    return cache[id];
   }
 
   const buf: string | Uint8Array = await client.transactions.getData(id, {
@@ -17,7 +16,7 @@ export async function getData(client: Arweave, id: string): Promise<string> {
     string: true,
   });
 
-  if (isBrowser) updateCache("dataCache", id, buf.toString());
+  updateCache("dataCache", id, buf.toString());
 
   return buf.toString();
 }

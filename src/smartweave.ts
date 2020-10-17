@@ -1,6 +1,7 @@
 import { query, updateCache } from "./utils";
 import Arweave from "arweave";
 import { StateInterface } from "community-js/lib/faces";
+import localPorridge from "localporridge";
 import { readContract } from "smartweave";
 
 const latestInteraction = async (contract: string): Promise<string> => {
@@ -34,25 +35,21 @@ export const getContract = async (
   client: Arweave,
   contract: string
 ): Promise<StateInterface> => {
-  const isBrowser: boolean = typeof window !== "undefined";
+  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
 
-  if (isBrowser) {
-    const latest = await latestInteraction(contract);
-    const cache = JSON.parse(localStorage.getItem("smartweaveCache") || "{}");
+  const latest = await latestInteraction(contract);
+  const cache = JSON.parse(storage.getItem("smartweaveCache") || "{}");
 
-    if (contract in cache) {
-      if (cache[contract].latest === latest) {
-        return cache[contract].state;
-      }
+  if (contract in cache) {
+    if (cache[contract].latest === latest) {
+      return cache[contract].state;
     }
-
-    const state = await readContract(client, contract);
-    updateCache("smartweaveCache", contract, {
-      latest,
-      state,
-    });
-    return state;
-  } else {
-    return await readContract(client, contract);
   }
+
+  const state = await readContract(client, contract);
+  updateCache("smartweaveCache", contract, {
+    latest,
+    state,
+  });
+  return state;
 };
