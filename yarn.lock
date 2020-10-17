@@ -25,9 +25,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "14.11.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.8.tgz#fe2012f2355e4ce08bca44aeb3abbb21cf88d33f"
-  integrity sha512-KPcKqKm5UKDkaYPTuXSx8wEP7vE9GnuaXIZKijwRYcePpZFDVuy2a57LarFKiORbHOuTOOwYzxVxcUzsh2P2Pw==
+  version "14.11.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.10.tgz#8c102aba13bf5253f35146affbf8b26275069bef"
+  integrity sha512-yV1nWZPlMFpoXyoknm4S56y2nlTAuFYaJuQtYRAOU7xA/FJ9RY0Xm7QOkaYMMmr8ESdHIuUb6oQgR/0+2NqlyA==
 
 ansi-regex@^5.0.0:
   version "5.0.0"
@@ -132,12 +132,12 @@ commondir@^1.0.1:
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
 community-js@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/community-js/-/community-js-1.0.15.tgz#06a0b144735f8215ae78d9de7d3eec540a9aef49"
-  integrity sha512-RzlgUym2HkaPwW9Z0qV3GBAOHL82SqffXf0ZA+3QeXFlIXK4Zst6/8cHfSC97bm7+vFFTOhPNWI2rmR5Iomfyw==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/community-js/-/community-js-1.1.1.tgz#33b928f7329b7598f6f8c68810bebbde7d02e3e2"
+  integrity sha512-awNIDLP4lMMeGF+gjnszP4EZuiJr4obr8AwR0d3FG5VvqKSiqfMPkYaHnG94ODXfLCYgguvyQ7GbGFo2EjwD8g==
   dependencies:
     arweave "^1.9.1"
-    smartweave "^0.3.6"
+    smartweave "^0.3.x"
     tiny-worker "^2.3.0"
 
 debug@=3.1.0:
@@ -367,9 +367,9 @@ rollup-plugin-typescript2@^0.27.3:
     tslib "2.0.1"
 
 rollup@^2.30.0:
-  version "2.30.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.30.0.tgz#316a1eb0389dbda4082ef2d191b31488995e4c41"
-  integrity sha512-j4K1hUZfgFM03DUpayd3c7kZW+2wDbI6rj7ssQxpCpL1vsGpaM0vSorxBuePFwQDFq9O2DI6AOQbm174Awsq4w==
+  version "2.32.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.32.0.tgz#ac58c8e85782bea8aa2d440fc05aba345013582a"
+  integrity sha512-0FIG1jY88uhCP2yP4CfvtKEqPDRmsUwfY1kEOOM+DH/KOGATgaIFd/is1+fQOxsvh62ELzcFfKonwKWnHhrqmw==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -388,7 +388,7 @@ set-blocking@^2.0.0:
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
 
-smartweave@^0.3.6:
+smartweave@^0.3.6, smartweave@^0.3.x:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/smartweave/-/smartweave-0.3.6.tgz#97a78d10b2f094f78a4b6bdecb6b55c8527d6728"
   integrity sha512-+JWkNkeZj+S1u8qwJBDypzYQwuxVuWfOlLBQQRXiEMk+9YB4z28aWIFu5PxaGYYsKK1Vwc3J9bjI5EATaRBQCQ==
@@ -425,11 +425,6 @@ tslib@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
-
-tslib@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
 
 typescript@^4.0.3:
   version "4.0.3"
