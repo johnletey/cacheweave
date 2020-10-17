@@ -3,7 +3,10 @@ import localPorridge from "localporridge";
 import { updateCache } from "./utils";
 
 export async function getData(client: Arweave, id: string): Promise<string> {
-  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
+  const storage =
+    typeof localStorage === "undefined"
+      ? new localPorridge("./.cache.json")
+      : localStorage;
 
   const cache = JSON.parse(storage.getItem("dataCache") || "{}");
 

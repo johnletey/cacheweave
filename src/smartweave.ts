@@ -35,7 +35,10 @@ export const getContract = async (
   client: Arweave,
   contract: string
 ): Promise<StateInterface> => {
-  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
+  const storage =
+    typeof localStorage === "undefined"
+      ? new localPorridge("./.cache.json")
+      : localStorage;
 
   const latest = await latestInteraction(contract);
   const cache = JSON.parse(storage.getItem("smartweaveCache") || "{}");

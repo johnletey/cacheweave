@@ -6,7 +6,10 @@ export const updateCache = (
   element: string,
   value: any
 ): void => {
-  const storage = typeof localStorage === "undefined" ? new localPorridge("./.cache.json") : localStorage;
+  const storage =
+    typeof localStorage === "undefined"
+      ? new localPorridge("./.cache.json")
+      : localStorage;
 
   const cache = JSON.parse(storage.getItem(name) || "{}");
 
