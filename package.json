@@ -1,6 +1,6 @@
 {
   "name": "cacheweave",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Arweave caching made easy.",
   "author": "John Letey <johnletey@gmail.com>",
   "license": "MIT",

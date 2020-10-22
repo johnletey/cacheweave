@@ -9,8 +9,8 @@
 
 ![](https://raw.githubusercontent.com/johnletey/cacheweave/main/img/getData.svg)
 
-> `getData` is identical to `arweave.transactions.getData`, except it uses caching when run in the browser.
+> `getData` is identical to `arweave.transactions.getData`, except it uses caching.
 
 ![](https://raw.githubusercontent.com/johnletey/cacheweave/main/img/getContract.svg)
 
-> `getContract` is identical to `smartweave.readContract`, except it uses caching when run in the browser.
+> `getContract` is identical to `smartweave.readContract`, except it uses caching.
