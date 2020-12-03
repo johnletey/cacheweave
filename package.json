@@ -1,6 +1,6 @@
 {
   "name": "cacheweave",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Arweave caching made easy.",
   "author": "John Letey <johnletey@gmail.com>",
   "license": "MIT",
@@ -16,17 +16,16 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
-    "arweave": "^1.9.1",
-    "community-js": "^1.0.15",
+    "ar-gql": "^0.0.3",
+    "arweave": "^1.10.0",
+    "community-js": "^1.1.6",
     "localporridge": "^1.0.0",
-    "node-fetch": "^2.6.1",
-    "smartweave": "^0.3.6"
+    "smartweave": "^0.4.12"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.5.7",
-    "prettier": "^2.1.2",
-    "rollup": "^2.30.0",
-    "rollup-plugin-typescript2": "^0.27.3",
-    "typescript": "^4.0.3"
+    "prettier": "^2.2.1",
+    "rollup": "^2.34.1",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.2"
   }
 }
