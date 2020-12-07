@@ -1,9 +1,8 @@
 import { run } from "ar-gql";
-import { updateCache } from "./utils";
 import Arweave from "arweave";
 import { StateInterface } from "community-js/lib/faces";
-import localPorridge from "localporridge";
 import { readContract } from "smartweave";
+import { updateCache } from "./utils";
 
 const latestInteraction = async (
   contract: string,
@@ -41,27 +40,28 @@ export const getContract = async (
   client: Arweave,
   contract: string
 ): Promise<StateInterface> => {
-  const storage =
-    typeof localStorage === "undefined"
-      ? new localPorridge("./.cache.json")
-      : localStorage;
+  const isBrowser: boolean = typeof window !== "undefined";
 
-  const latest = await latestInteraction(
-    contract,
-    (await client.network.getInfo()).height
-  );
-  const cache = JSON.parse(storage.getItem("smartweaveCache") || "{}");
+  if (isBrowser) {
+    const latest = await latestInteraction(
+      contract,
+      (await client.network.getInfo()).height
+    );
+    const cache = JSON.parse(localStorage.getItem("smartweaveCache") || "{}");
 
-  if (contract in cache) {
-    if (cache[contract].latest === latest) {
-      return cache[contract].state;
+    if (contract in cache) {
+      if (cache[contract].latest === latest) {
+        return cache[contract].state;
+      }
     }
-  }
 
-  const state = await readContract(client, contract);
-  updateCache("smartweaveCache", contract, {
-    latest,
-    state,
-  });
-  return state;
+    const state = await readContract(client, contract);
+    updateCache("smartweaveCache", contract, {
+      latest,
+      state,
+    });
+    return state;
+  } else {
+    return await readContract(client, contract);
+  }
 };

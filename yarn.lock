@@ -214,11 +214,6 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-localporridge@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/localporridge/-/localporridge-1.0.0.tgz#718eb86547b075ec78b369a26b7d1b6fddd171d5"
-  integrity sha512-mCaTeK+CMBUElyxQiLOIB0GdEOTZwvYl/VyqynJ+ApQbelItugJnp4+45jBcFbSAvFV9lStnkCK1ZbCNL75iUg==
-
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
@@ -322,10 +317,10 @@ rollup-plugin-typescript2@^0.29.0:
     resolve "1.17.0"
     tslib "2.0.1"
 
-rollup@^2.34.1:
-  version "2.34.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.34.1.tgz#a387230df02c58b242794a213dfb68b42de2c8fb"
-  integrity sha512-tGveB6NU5x4MS/iXaIsjfUkEv4hxzJJ4o0FRy5LO62Ndx3R2cmE1qsLYlSfRkvHUUPqWiFoxEm8pRftzh1a5HA==
+rollup@^2.34.2:
+  version "2.34.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.34.2.tgz#fa73e05c64df587e9ed4dc80d7d4e7d4a43f8908"
+  integrity sha512-mvtQLqu3cNeoctS+kZ09iOPxrc1P1/Bt1z15enuQ5feyKOdM3MJAVFjjsygurDpSWn530xB4AlA83TWIzRstXA==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -339,10 +334,21 @@ semver@^6.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-smartweave@^0.4.11, smartweave@^0.4.12:
+smartweave@^0.4.11:
   version "0.4.12"
   resolved "https://registry.yarnpkg.com/smartweave/-/smartweave-0.4.12.tgz#e9c770867ab5eb36940637db264620974e2c19b6"
   integrity sha512-EMaRLV7ZT0kafU+XDlNH7EBKIJO1PfRXe4yOKu1IVN279uMHCRaEywioo7eHQ2WjCryr168X07ndpFA6l1fgkA==
+  dependencies:
+    "@weavery/clarity" "^0.1.5"
+    arweave "^1.9.1"
+    bignumber.js "^9.0.1"
+    loglevel "^1.7.0"
+    yargs "^16.1.0"
+
+smartweave@^0.4.13:
+  version "0.4.13"
+  resolved "https://registry.yarnpkg.com/smartweave/-/smartweave-0.4.13.tgz#d5da11332199acd7e3548b8d553f68d52b60c0e9"
+  integrity sha512-xf+ACoQ37sejfYJvl+G4Glc69P3m5iT29kwRuC7w8rBRSdhyZeHSssJMbYpFzaQtu4AcGy1YUnyPh+1iPQv3hQ==
   dependencies:
     "@weavery/clarity" "^0.1.5"
     arweave "^1.9.1"
