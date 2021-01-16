@@ -38,8 +38,12 @@ const latestInteraction = async (
 
 export const getContract = async (
   client: Arweave,
-  contract: string
-): Promise<StateInterface> => {
+  contract: string,
+  returnValidity?: boolean
+): Promise<
+  | StateInterface
+  | { state: StateInterface; validity: { [id: string]: boolean } }
+> => {
   const isBrowser: boolean = typeof window !== "undefined";
 
   if (isBrowser) {
@@ -55,13 +59,18 @@ export const getContract = async (
       }
     }
 
-    const state = await readContract(client, contract);
+    const state = await readContract(
+      client,
+      contract,
+      undefined,
+      returnValidity
+    );
     updateCache("smartweaveCache", contract, {
       latest,
       state,
     });
     return state;
   } else {
-    return await readContract(client, contract);
+    return await readContract(client, contract, undefined, returnValidity);
   }
 };
