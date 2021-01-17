@@ -55,22 +55,19 @@ export const getContract = async (
 
     if (contract in cache) {
       if (cache[contract].latest === latest) {
-        return cache[contract].state;
+        const res = cache[contract].res;
+        return returnValidity ? res : res.state;
       }
     }
 
-    const state = await readContract(
-      client,
-      contract,
-      undefined,
-      returnValidity
-    );
+    const res = await readContract(client, contract, undefined, true);
     updateCache("smartweaveCache", contract, {
       latest,
-      state,
+      res,
     });
-    return state;
+    return returnValidity ? res : res.state;
   } else {
-    return await readContract(client, contract, undefined, returnValidity);
+    const res = await readContract(client, contract, undefined, true);
+    return returnValidity ? res : res.state;
   }
 };
