@@ -91,7 +91,17 @@ articles@~0.2.1:
   resolved "https://registry.yarnpkg.com/articles/-/articles-0.2.2.tgz#cc6b429f8cfa811f41e7a08505abbb4e45503197"
   integrity sha512-S3Y4MPp+LD/l0HHm/4yrr6MoXhUkKT98ZdsV2tkTuBNywqUXEtvJT+NBO3KTSQEttc5EOwEJe2Xw8cZ9TI5Hrw==
 
-arweave@^1.10.2, arweave@^1.10.6, arweave@^1.10.8:
+arweave@^1.10.11:
+  version "1.10.11"
+  resolved "https://registry.yarnpkg.com/arweave/-/arweave-1.10.11.tgz#59dff46319e258d68f9b921a1f709be457fb7162"
+  integrity sha512-rh3Yhc7Zjf476Lvg4zjvURg1HvdrRej/2528QqQrlej/EocEfHt1/TEM35r3ghDzRBvHLUcMkqIDUwLotS5sUA==
+  dependencies:
+    asn1.js "^5.4.1"
+    axios "^0.21.1"
+    base64-js "^1.3.1"
+    bignumber.js "^9.0.1"
+
+arweave@^1.10.2, arweave@^1.10.6:
   version "1.10.8"
   resolved "https://registry.yarnpkg.com/arweave/-/arweave-1.10.8.tgz#c6ed5010eaad86d6b56cd0a0bd60a70a28dffa79"
   integrity sha512-7FUqD6E6PxjFyCY5dzpxVFt93Ba4i2zlT6qxLWVmOIs3bwt4wPCaZ0TAinXA0si6tlRkK4jd5utCUx6Gqb800A==
@@ -681,6 +691,25 @@ smartweave@^0.4.25:
     "@types/inquirer" "^7.3.1"
     "@weavery/clarity" "^0.1.5"
     arweave "^1.10.2"
+    bignumber.js "^9.0.1"
+    chalk "^4.1.0"
+    clui "^0.3.6"
+    figlet "^1.5.0"
+    inquirer "^7.3.3"
+    json-beautify "^1.1.1"
+    loglevel "^1.7.0"
+    sentencer "^0.2.1"
+    yargs "^16.2.0"
+
+smartweave@^0.4.27:
+  version "0.4.27"
+  resolved "https://registry.yarnpkg.com/smartweave/-/smartweave-0.4.27.tgz#8bfd723eafc854520cfbc96522ef874d7c5853e6"
+  integrity sha512-uxUOAAhLwugSmWtdLniRL5XSXWzUqV/dve/P4NcCn4zjY3Wj2xpSvEihw1WQqae4JbYABFzwchFDl8c2PrkMLQ==
+  dependencies:
+    "@types/clui" "^0.3.0"
+    "@types/inquirer" "^7.3.1"
+    "@weavery/clarity" "^0.1.5"
+    arweave "^1.10.11"
     bignumber.js "^9.0.1"
     chalk "^4.1.0"
     clui "^0.3.6"

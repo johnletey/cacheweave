@@ -1,6 +1,6 @@
 {
   "name": "cacheweave",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Arweave caching made easy.",
   "author": "John Letey <johnletey@gmail.com>",
   "license": "MIT",
@@ -17,9 +17,9 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "ar-gql": "^0.0.3",
-    "arweave": "^1.10.8",
+    "arweave": "^1.10.11",
     "community-js": "^1.1.27",
-    "smartweave": "^0.4.25"
+    "smartweave": "^0.4.27"
   },
   "devDependencies": {
     "prettier": "^2.2.1",
